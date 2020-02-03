@@ -3,7 +3,8 @@ from slackclient import SlackClient
 
 
 # CPS-847-Bot Slack
-Bot_User_OAuth_Access_Token = 'Add Token'
+#Bot_User_OAuth_Access_Token = 'xoxb-914347831552-936466765782-3jbGzqV6cIcPbDtB5RUP38A3'
+Bot_User_OAuth_Access_Token = 'Add User Authentication Token'
 SLACK_API_TOKEN = Bot_User_OAuth_Access_Token
 
 # Hardcoded SLACK_API_TOKEN
@@ -30,7 +31,8 @@ def say_hello(data):
 if client.rtm_connect(): #this connects to the slack api using real time messsaging 
     while client.server.connected is True:
         for data in client.rtm_read(): #while you have something inputed, the json file will be created and the client will read it 
-            if "type" in data and data["type"] == "message":
+            if "type" in data and data["type"] == "message": #This is checking the json file for a type field and making sure that type field contains a message
                 say_hello(data) #data is a whole json file that is being inserted into the function to extract certain values
 else:
     print("Connection Failed")
+
