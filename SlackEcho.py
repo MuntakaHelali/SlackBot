@@ -3,7 +3,6 @@ from slackclient import SlackClient
 
 
 # CPS-847-Bot Slack
-#Bot_User_OAuth_Access_Token = 'xoxb-914347831552-936466765782-3jbGzqV6cIcPbDtB5RUP38A3'
 Bot_User_OAuth_Access_Token = 'Add User Authentication Token'
 SLACK_API_TOKEN = Bot_User_OAuth_Access_Token
 
